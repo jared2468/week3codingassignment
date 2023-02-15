@@ -20,12 +20,26 @@ console.log(ages[ages.length-1] - ages.slice(0,1));// subtract 1st element using
 ages.push(14); // add new age to array, 14
 console.log(ages); //print array with new age
 console.log(ages[ages.length-1] - ages.slice(0,1));//I think should go in a function but not sure how to make that work?
-//console.log(sub);
-//console.log(ages[ages.length-1] - ages.slice(0,1))
+
 // 1c. Use a loop to iterate through the array and calculate the average age. 
+let totalAge = 0;//created variable to hold the sum of the ages
+for (let i = 0; i < ages.length; i++){
+    totalAge += ages[i]
+};//for loop too iterate through and add the elements of the array
+let avg = totalAge / ages.length;//calculate average, should be approximatetly 27
+console.log(avg);
 // 2.  Create an array called names that contains the following values: ‘Sam’, ‘Tommy’, ‘Tim’, ‘Sally’, ‘Buck’, ‘Bob’.
+const names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'];//create array, names
+console.log(names);//print array to console
 // 2a. Use a loop to iterate through the array and calculate the average number of letters per name. 
+let namesTotal = 0;//create a variable to hold total
+for (let i = 0; i < names.length; i++){
+    namesTotal += names[i].length;
+}//for loop to iterate through the elements of array and add the length of each element
+let averageOfNames = namesTotal / names.length;//created variable to calculate average
+console.log(averageOfNames);//print average lenght of names array
 // 2b. Use a loop to iterate through the array again and concatenate all the names together, separated by spaces. 
+console.log(names.join(' '))//join method to concatenate the names and added spaces
 // 3.  How do you access the last element of any array? 
 console.log(ages[ages.length-1]); // find last element using length -1, should be 14 
 
@@ -33,12 +47,9 @@ console.log(ages[ages.length-1]); // find last element using length -1, should b
 console.log(ages.slice(0,1));//using slice to find the element in any part of the index, (start,finisth), this gives index 0
 
 // 5.  Create a new array called nameLengths. Write a loop to iterate over the previously created names array and add the length of each name to the nameLengths array.
-const names = ["jared", "judy", "lee"];//create new array
-console.log(names);//print array to console
-const namelengths = [5,4,3];//create new array
-console.log(namelengths);//print array
+
 // For example:
-//help
+
 
 // let names = ["Kelly", "Sam", "Kate"];    // starting with this array
 // let nameLengths = [5, 3, 4];             // create a new array

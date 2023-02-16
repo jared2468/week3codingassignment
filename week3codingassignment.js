@@ -10,16 +10,18 @@ console.log('ages array: ' + ages); //print array
 // 1a.Programmatically subtract the value of the first element in the array from the value in the last element of the array.   
 // Do not use numbers to reference the last element, find it programmatically.
 // ages[7] – ages[0] is not allowed
-
-console.log(ages[ages.length-1] - ages.slice(0,1));// subtract 1st element using slice from last using length-1, should be 90
+function subtractAges(data){
+    console.log('Subract 1st from last: ', data[data.length-1] - data.slice(0,1));// subtract 1st element using slice from last using length-1, should be 90
+}
+subtractAges(ages);
 
 //let x = (ages[ages.length-1] - ages[0]); //subract the 1st element from the last
 //console.log('Q1a. Subract the 1st element from the last: ' + x); //print the result
 // 1b. Add a new age to your array and repeat the step above to ensure it is dynamic. (works for arrays of different lengths).
 //ages.push(14);
 ages.push(14); // add new age to array, 14
-console.log(ages); //print array with new age
-console.log(ages[ages.length-1] - ages.slice(0,1));//I think should go in a function but not sure how to make that work?
+console.log('Ages after adding: ' + ages); //print array with new age
+subtractAges(ages)//I think should go in a function but not sure how to make that work?
 
 // 1c. Use a loop to iterate through the array and calculate the average age. 
 let totalAge = 0;//created variable to hold the sum of the ages
@@ -27,7 +29,7 @@ for (let i = 0; i < ages.length; i++){
     totalAge += ages[i]
 };//for loop too iterate through and add the elements of the array
 let avg = totalAge / ages.length;//calculate average, should be approximatetly 27
-console.log(avg);
+console.log('Average age: ' + avg);
 // 2.  Create an array called names that contains the following values: ‘Sam’, ‘Tommy’, ‘Tim’, ‘Sally’, ‘Buck’, ‘Bob’.
 const names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'];//create array, names
 console.log(names);//print array to console
@@ -37,9 +39,9 @@ for (let i = 0; i < names.length; i++){
     namesTotal += names[i].length;
 }//for loop to iterate through the elements of array and add the length of each element
 let averageOfNames = namesTotal / names.length;//created variable to calculate average
-console.log(averageOfNames);//print average lenght of names array
+console.log('Average length of name: ' + averageOfNames);//print average lenght of names array
 // 2b. Use a loop to iterate through the array again and concatenate all the names together, separated by spaces. 
-console.log(names.join(' '))//join method to concatenate the names and added spaces
+console.log('Names array: ' + names.join(' '))//join method to concatenate the names and added spaces
 // 3.  How do you access the last element of any array? 
 console.log(ages[ages.length-1]); // find last element using length -1, should be 14 
 
@@ -47,6 +49,10 @@ console.log(ages[ages.length-1]); // find last element using length -1, should b
 console.log(ages.slice(0,1));//using slice to find the element in any part of the index, (start,finisth), this gives index 0
 
 // 5.  Create a new array called nameLengths. Write a loop to iterate over the previously created names array and add the length of each name to the nameLengths array.
+let names1 = ['shrek','donkey','fiona','prince farquad'];
+console.log('New Names list: ' + names1);
+let nameLengths1 = [5,6,5,14];
+console.log('New name lengths: ' + nameLengths1);
 
 // For example:
 

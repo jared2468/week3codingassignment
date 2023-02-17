@@ -35,8 +35,8 @@ const names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'];//create array, na
 console.log(names);//print array to console
 // 2a. Use a loop to iterate through the array and calculate the average number of letters per name. 
 let namesTotal = 0;//create a variable to hold total
-for (let i = 0; i < names.length; i++){
-    namesTotal += names[i].length;
+for (let i = 0; i < names.length; i++){ // for loop to iterate array names
+    namesTotal += names[i].length; // place the names length inside total variable
 }//for loop to iterate through the elements of array and add the length of each element
 let averageOfNames = namesTotal / names.length;//created variable to calculate average
 console.log('Average length of name: ' + averageOfNames);//print average lenght of names array
@@ -49,11 +49,13 @@ console.log(ages[ages.length-1]); // find last element using length -1, should b
 console.log(ages.slice(0,1));//using slice to find the element in any part of the index, (start,finisth), this gives index 0
 
 // 5.  Create a new array called nameLengths. Write a loop to iterate over the previously created names array and add the length of each name to the nameLengths array.
-let names1 = ['shrek','donkey','fiona','prince farquad'];
-console.log('New Names list: ' + names1);
-let nameLengths1 = [5,6,5,14];
-console.log('New name lengths: ' + nameLengths1);
-
+let names1 = ['shrek','donkey','fiona','lord farquad']; //created array names1
+console.log('New Names list: ' + names1); // print to console
+let nameLengths1 = []; //create an array
+for (let i = 0; i < names1.length; i++){ // for loop to iterate the array names1
+    nameLengths1.push(names1[i].length); // using push to place the name lengths into an array
+}console.log(nameLengths1); // print to console
+// using for loop to iterate through names and log the name lengths
 // For example:
 
 
@@ -61,10 +63,18 @@ console.log('New name lengths: ' + nameLengths1);
 // let nameLengths = [5, 3, 4];             // create a new array
 
 // 6.  Write a loop to iterate over the nameLengths array and calculate the sum of all the elements in the array. 
-
+let lengthsTots = 0; // created variable to hold total
+for (let i = 0; i < nameLengths1.length; i++){ //for loop to iterate the length of names
+    lengthsTots += nameLengths1[i]; // add lengths to total variable
+}
+let avgLength = lengthsTots / nameLengths1.length;
+console.log('Average name lengths: ' + avgLength);
 
 // 7.  Write a function that takes two parameters, word and n, as arguments and returns the word concatenated to itself n number of times. (i.e. if I pass in ‘Hello’ and 3, I would expect the function to return ‘HelloHelloHello’).
-
+function myWordXTimes(word, n){ // create function
+    return word.repeat(n); // used repeat n times
+}
+console.log('Word Function: ' + myWordXTimes('hello', 3)); // call and print function to console
 
 // 8.  Write a function that takes two parameters, firstName and lastName, and returns a full name.  The full name should be the first and the last name separated by a space.
 

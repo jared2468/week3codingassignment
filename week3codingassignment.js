@@ -77,12 +77,35 @@ function myWordXTimes(word, n){ // create function
 console.log('Word Function: ' + myWordXTimes('hello', 3)); // call and print function to console
 
 // 8.  Write a function that takes two parameters, firstName and lastName, and returns a full name.  The full name should be the first and the last name separated by a space.
-
+function fullName(first,last){
+    return first + " " + last;
+}
+console.log("My full name is" + " " + fullName("Jared","Hollingsworth"));
 
 
 // 9.  Write a function that takes an array of numbers and returns true if the sum of all the numbers in the array is greater than 100.
-
-
+function isAverageGreater(data){
+    let totalData = 0
+    for (let i = 0; i < data.length; i++){ // for loop to calculate sum of array
+    totalData += data[i];}
+    let isAvg = totalData / data.length // calcalates average of array
+    let isGreater = isAvg > 100 // checks if average is greater than 100
+    console.log("the average is greater than 100: " + isGreater) // print results to console
+}
+let myNumbers = [10,15,17];
+console.log('these are my numbers: ' + myNumbers);
+isAverageGreater(myNumbers);
+// function isGreaterThan100(data){
+//     let totalData = 0
+//     for (let i = 0; i < data.length; i++){
+//         totalData += data[i];
+//         let avgData = totalData / data.length;
+//         return avgData > 100
+//         }
+//     }
+// let myNumbers = [100,140,150];
+// console.log('These are my numbers:' + ' ' + myNumbers);
+// console.log('The average of my numbers is greater than 100:' + ' ' + isGreaterThan100(myNumbers));
 // 10.  Write a function that takes an array of numbers and returns the average of all the elements in the array.
 
 
@@ -97,7 +120,5 @@ console.log('Word Function: ' + myWordXTimes('hello', 3)); // call and print fun
 // In comments, write what the function does and why you created it.
 
 
-
-
-
-
+//
+//

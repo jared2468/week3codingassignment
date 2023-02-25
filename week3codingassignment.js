@@ -92,9 +92,9 @@ function isAverageGreater(data){
     let isGreater = isAvg > 100 // checks if average is greater than 100
     console.log("the average is greater than 100: " + isGreater) // print results to console
 }
-let myNumbers = [10,15,17];
-console.log('these are my numbers: ' + myNumbers);
-isAverageGreater(myNumbers);
+let myNumbers = [10,15,17]; // create an array
+console.log('these are my numbers: ' + myNumbers); // print array to console
+isAverageGreater(myNumbers); // call theb function
 // function isGreaterThan100(data){
 //     let totalData = 0
 //     for (let i = 0; i < data.length; i++){
@@ -107,15 +107,98 @@ isAverageGreater(myNumbers);
 // console.log('These are my numbers:' + ' ' + myNumbers);
 // console.log('The average of my numbers is greater than 100:' + ' ' + isGreaterThan100(myNumbers));
 // 10.  Write a function that takes an array of numbers and returns the average of all the elements in the array.
-
-
+function avgOfElements (data){
+    let totalData = 0
+    for (let i = 0; i < data.length; i++){ // for loop to calculate sum of array
+    totalData += data[i];}
+    return totalData / data.length // calcalates average of array
+    }
+console.log('This is the average of the array: ' + avgOfElements([15,17,3,29]));
 // 11.  Write a function that takes two arrays of numbers and returns true if the average of the elements in the first array is greater than the average of the elements in the second array.
+function compare2Arrays(a,b) { // created higher function
+    function avg1(a) { //function to find the average of 1st array
+        let totalA = 0; // created a variable to hold the total count
+        for (let x = 0; x < a.length; x++){; // for loop to calculate sum of array
+        totalA += a[x];} // adds the elements in the array
+        return totalA / a.length; // calcalates average of array
+        }
 
-
+    function avg2(b) { // function to find average of 2nd array
+        let totalB = 0; // variable to hold sum of 2nd array
+        for (let y = 0; y < b.length; y++){; // for loop to calculate sum of array
+        totalB += b[y]}; // adds the elements in the array
+        return totalB / b.length; // calcalates average of array
+        }
+    return avg1(a) > avg2(b);
+    }
+ 
+let a = [130,101,160] // create 1st array
+console.log('This is the 1st array: ' + a) // log 1st array
+let b = [12,37,55] // create 2nd array
+console.log('This is the 2nd array: ' + b) // log 2nd array
+console.log('The first array is greater: ' + compare2Arrays(a,b)); // log results of greater than function comparing the averages of 2 arrays
+//console.log(compare2Arrays([15,12,53,67],[3,9,10,7]));
 // 12.  Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket, and returns true if it is hot outside and if moneyInPocket is greater than 10.50.
-
-
+function willBuyDrink(boolean,money){
+    if (boolean = true && money > 10.50){
+        return true
+    }
+}
+let isHotOutside = true
+let money = 12
+console.log('I will buy a drink: ' + willBuyDrink(isHotOutside, money))
 // 13.  Create a function of your own that solves a problem. 
+let myGuitars = [
+    {
+        'make': 'Fender',
+        'type': 'Strat',
+        'color': 'red',
+        'pickup configuration': 'h'
+    },
+    {
+        'make': 'Fender',
+        'type': 'strat',
+        'color': 'surf pearl',
+        'pickup configuration': 'sss'
+    },
+    {
+        'make': 'Fender',
+        'type': 'strat',
+        'color': 'silver',
+        'pickup configuration': 'sss'
+    },
+    {
+        'make': 'Fender',
+        'type': 'tele',
+        'color': 'black',
+        'pickup configuration': 'ss'
+    },
+    {
+        'make': 'Shecter',
+        'model': 'strat',
+        'color': 'blue',
+        'pickup configuration': 'hh'
+    },
+    {
+        'make': 'Jackson',
+        'model': 'bass',
+        'color': 'black',
+        'pickup configuration': 'h'
+    },
+    {
+        'make': 'Fender',
+        'model': 'bass',
+        'color': 'blue',
+        'pickup configuration': 's'
+    },
+    {
+        'make': 'Gibson',
+        'model': 'acoustic',
+        'color': 'natural',
+        'pickup configuration': 'none'
+    },
+]
+console.log(myGuitars);
 
 // In comments, write what the function does and why you created it.
 

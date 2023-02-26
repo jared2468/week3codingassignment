@@ -148,59 +148,86 @@ let isHotOutside = true
 let money = 12
 console.log('I will buy a drink: ' + willBuyDrink(isHotOutside, money))
 // 13.  Create a function of your own that solves a problem. 
-let myGuitars = [
+let myGuitars = [ // create an array of objects for my guitars
     {
-        'make': 'Fender',
-        'type': 'Strat',
-        'color': 'red',
-        'pickup configuration': 'h'
+        make: 'Fender',
+        type: 'Strat',
+        color: 'red'
     },
     {
-        'make': 'Fender',
-        'type': 'strat',
-        'color': 'surf pearl',
-        'pickup configuration': 'sss'
+        make: 'Fender',
+        type: 'strat',
+        color: 'surf pearl'
     },
     {
-        'make': 'Fender',
-        'type': 'strat',
-        'color': 'silver',
-        'pickup configuration': 'sss'
+        make: 'Fender',
+        type: 'strat',
+        color: 'silver'
     },
     {
-        'make': 'Fender',
-        'type': 'tele',
-        'color': 'black',
-        'pickup configuration': 'ss'
+        make: 'Fender',
+        type: 'tele',
+        color: 'black',
+        pickups: 'ss'
     },
     {
-        'make': 'Shecter',
-        'model': 'strat',
-        'color': 'blue',
-        'pickup configuration': 'hh'
+        make: 'Shecter',
+        type: 'strat',
+        color: 'blue'
     },
     {
-        'make': 'Jackson',
-        'model': 'bass',
-        'color': 'black',
-        'pickup configuration': 'h'
+        make: 'Jackson',
+        type: 'bass',
+        color: 'black'
     },
     {
-        'make': 'Fender',
-        'model': 'bass',
-        'color': 'blue',
-        'pickup configuration': 's'
+        make: 'Fender',
+        type: 'bass',
+        color: 'blue'
     },
     {
-        'make': 'Gibson',
-        'model': 'acoustic',
-        'color': 'natural',
-        'pickup configuration': 'none'
+        make: 'Gibson',
+        type: 'acoustic',
+        color: 'natural'
     },
-]
-console.log(myGuitars);
+    {
+        make: 'Shecter',
+        type: 'bass',
+        color: 'black'
+    },
+];
+console.log('These are my guitars:');
+console.log(myGuitars); // print to console my array of objects
+function howManyMakesGuitars(a){ // creates function to count how many of a specific make of guitars
+    let counterA = 0; // variable to store count
+    for(let x = 0; x < myGuitars.length; x++){ // for loop to iterate through array
+        if (myGuitars[x].make == a) counterA++; // sets make as element and equal to parameter b 
+    }
+    return counterA // returns counter
+}
+console.log('How many Fender guitars are in my collection:'); // print to console string
+console.log(howManyMakesGuitars('Fender')); // print to console number of Fender guitars // 5
+console.log('How many Shecter guitars are in my collection:'); // print to console string
+console.log(howManyMakesGuitars('Shecter')); // print to console number of Fender guitars // 2
+// function howManyTypesGuitars(b){
+//     let counterB = 0;
+//     for(let y = 0; y < myGuitars.length; y++){
+//         if (myGuitars[y].type == a) counterB++;    
+//     }
+//     return counterB
+// }
+// function howManyColorsGuitars(c){
+//     let counterC = 0;
+//     for(let z = 0; z < myGuitars.length; z++){
+//         if (myGuitars[z].color == a) counterC++;    
+//     }
+//     return counterC
+// }
+
+
 
 // In comments, write what the function does and why you created it.
+// The function counts how many of a particular make of guitars I have in my collection. I created it because I thought it would be fun to do. 
 
 
 //
